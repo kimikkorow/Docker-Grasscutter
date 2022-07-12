@@ -1,19 +1,19 @@
-# 当前目录 /app
-mkdir gitdate
-mkdir Grasscutter
-
 echo "更新系统包"
-sudo apt-get update 
-sudo apt-get upgrade -y
+apt-get update 
+apt-get upgrade -y
 
 echo "设置时区"
-sudo apt-get install -y tzdata
+apt-get install -y tzdata
 ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-sudo apt-get install sudo nano git wget curl openjdk-17-jdk openjdk-17-jre -y
+apt-get install sudo nano git wget curl openjdk-17-jdk openjdk-17-jre -y
+
+# 当前目录 /app
+mkdir gitdate
+mkdir Grasscutter
 
 cd ./gitdate
 # 当前目录/app/gitdate
