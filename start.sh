@@ -1,3 +1,5 @@
+cd /app/Grasscutter
+
 echo "生成所需文件"
 java -jar grasscutter.jar
 
