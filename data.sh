@@ -46,3 +46,5 @@ mv ../gitdate/Grasscutter_Resources/Resources/* ./resources
 echo "创建插件目录"
 mkdir plugins
 
+rm -rf /app/gitdate
+
