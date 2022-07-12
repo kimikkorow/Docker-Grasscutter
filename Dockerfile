@@ -4,6 +4,7 @@ ENV TZ=Asia/Shanghai \
     mongodb=localhost \
     bindPort=443 \
     accessAddress=127.0.0.1
+
 ADD . /app
 
 RUN cd /app && sh data.sh
