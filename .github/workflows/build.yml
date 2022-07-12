@@ -4,13 +4,13 @@ name: CI to Docker Hub
 # 在 Push 到 main 分支后启动该流程
 on:
   schedule:
-    - cron:  '30 8 * * 6'
+    - cron:  '30 8 * * *'
 
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
       
 jobs:
   build:
