@@ -9,7 +9,7 @@ echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-apt-get install sudo nano git wget curl openjdk-17-jdk openjdk-17-jre -y
+apt-get install git openjdk-17-jdk openjdk-17-jre -y
 
 # 当前目录 /app
 mkdir gitdate
@@ -47,4 +47,5 @@ echo "创建插件目录"
 mkdir plugins
 
 rm -rf /app/gitdate
-
+apt-get autoclean -y
+apt-get autoremove -y
