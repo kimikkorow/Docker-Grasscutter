@@ -1,9 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive \
-    mongodb= \
-    bindPort= \
-    accessAddress=
+    mongodb=localhost \
+    bindPort=443 \
+    accessAddress=127.0.0.1
 ADD . /app
 
 RUN cd /app && sh data.sh
