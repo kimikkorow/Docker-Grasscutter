@@ -19,7 +19,7 @@ cd ./gitdate
 # 当前目录/app/gitdate
 
 echo "拉取Grasscutters/Grasscutter仓库"
-git clone https://github.com/Grasscutters/Grasscutter.git
+git clone -b 2.8 https://github.com/Grasscutters/Grasscutter.git
 
 echo "构建Grasscutter.jar"
 
@@ -35,7 +35,7 @@ cd ../../gitdate
 # 当前目录/app/gitdate
 
 echo "拉取Koko-boya/Grasscutter_Resources仓库"
-git clone https://github.com/Koko-boya/Grasscutter_Resources.git
+git clone -b 2.8 https://github.com/Koko-boya/Grasscutter_Resources.git
 
 cd ../Grasscutter 
 # 当前目录/app/Grasscutter
