@@ -1,3 +1,9 @@
+echo "更新插件"
+cd /app/Grasscutter/plugins
+rm -rf *.jar
+curl ${github_proxy}https://github.com/liujiaqi7998/GrasscuttersWebDashboard/releases/download/${GrasscuttersWebDashboard}/GrasscuttersWebDashboard-${GrasscuttersWebDashboard}.jar -O
+curl ${github_proxy}https://github.com/jie65535/gc-opencommand-plugin/releases/download/v${opencommand}/opencommand-dev-${opencommand}.jar -O
+
 cd /app/Grasscutter
 
 echo "生成所需文件"
