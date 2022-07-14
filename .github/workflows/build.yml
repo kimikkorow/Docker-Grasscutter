@@ -8,9 +8,9 @@ on:
 
   workflow_dispatch:
 
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - 2.8
       
 jobs:
   build:
