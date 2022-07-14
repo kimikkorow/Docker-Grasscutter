@@ -16,12 +16,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 删除旧的工作流
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          retain_days: 1
-          keep_minimum_runs: 2
-          
       # 在 GitHub Action 的服务器上 Check Out 源码（整体流程结束后会重置服务器环境因此不需要担心泄露）
       - name: Check Out Repo 
         uses: actions/checkout@v3
@@ -65,3 +59,9 @@ jobs:
       #     repository: ${{ github.repository }}
       #     retain_days: 30
       #     keep_minimum_runs: 6
+
+      - name: 删除旧的工作流
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          retain_days: 1
+          keep_minimum_runs: 2
