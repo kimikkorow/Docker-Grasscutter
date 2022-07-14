@@ -1,20 +1,36 @@
-修改以下命令并运行
+创建docker-compose.yml文件
 ```
-docker run -itd --name=容器名 --restart=always -e mongodb=数据库IP:端口 -e bindPort=Grasscutter服务端口 -e accessAddress=Grasscutter服务IP/公网IP/LAN口IP -p Grasscutter服务端口:Grasscutter服务端口 -p 22102:22102 kimikkorow/docker-grasscutter
-
-```
-
-
-进入容器运行一次grasscutter.jar，并选择语言
-```
-docker exec -it 容器名 /bin/bash
-cd /app/Grasscutter
-java -jar grasscutter.jar
+nano ./docker-compose.yml
 ```
 
-
-重启容器，查看log
+修改并写入以下内容到docker-compose.yml
 ```
-docker restart 容器名
-docker logs -f 容器名
+version: '3.3'
+services:
+  grasscutter:
+    container_name: grasscutter
+    restart: always
+    network_mode: host
+    environment:
+      - mongodb=数据库IP:端口                     
+      - bindPort=Grasscutter服务端口
+      - accessAddress=公网IP/LAN口IP
+      - GrasscuttersWebDashboard=6.0.0            # GrasscuttersWebDashboard插件版本号
+      - opencommand=1.2.4                         # opencommand插件版本号
+      - github_proxy=https://ghproxy.com/         # GitHub加速源 只支持格式为 https://ghproxy.com/https://github.com
+    image: 'kimikkorow/docker-grasscutter:latest'    # 2.8/latest
+
+  mongo:
+    container_name: mongodb
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongodb/data:/data/db
+    image: mongo
+```
+
+运行容器：
+```
+docker-compose up -d
 ```
