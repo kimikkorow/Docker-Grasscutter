@@ -18,7 +18,7 @@ services:
       - GrasscuttersWebDashboard=6.0.0            # GrasscuttersWebDashboard插件版本号
       - opencommand=1.2.4                         # opencommand插件版本号
       - github_proxy=https://ghproxy.com/         # GitHub加速源 只支持格式为 https://ghproxy.com/https://github.com
-    image: 'kimikkorow/docker-grasscutter:2.8'    # 2.8/latest
+    image: 'kimikkorow/docker-grasscutter:2.8'    # 2.8/2.8.5/latest
 
   mongo:
     container_name: mongodb

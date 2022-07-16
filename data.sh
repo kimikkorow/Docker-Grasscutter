@@ -18,13 +18,13 @@ mkdir Grasscutter
 cd ./gitdate
 # 当前目录/app/gitdate
 
-echo "拉取Grasscutters/Grasscutter仓库"
-git clone -b 2.8 https://github.com/Grasscutters/Grasscutter.git
+echo "拉取oliverlez22/Grasscutters2.8.5仓库"
+git clone -b 2.8 https://github.com/oliverlez22/Grasscutters2.8.5.git
 
 echo "构建Grasscutter.jar"
 
-cd ./Grasscutter
-# 当前目录/app/gitdate/Grasscutter
+cd ./Grasscutters2.8.5
+# 当前目录/app/gitdate/Grasscutters2.8.5
 chmod +x gradlew
 ./gradlew jar
 
@@ -34,14 +34,14 @@ mv keystore.p12 ../../Grasscutter/
 cd ../../gitdate
 # 当前目录/app/gitdate
 
-echo "拉取Koko-boya/Grasscutter_Resources仓库"
-git clone -b 2.8 https://github.com/Koko-boya/Grasscutter_Resources.git
+echo "拉取jinlili1111/Genshin-Impact-resources仓库"
+git clone https://github.com/jinlili1111/Genshin-Impact-resources.git
 
 cd ../Grasscutter 
 # 当前目录/app/Grasscutter
 mkdir resources
 
-mv ../gitdate/Grasscutter_Resources/Resources/* ./resources
+mv ../gitdate/Genshin-Impact-resources/* ./resources
 
 echo "创建插件目录"
 mkdir plugins
