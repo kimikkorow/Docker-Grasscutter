@@ -19,7 +19,7 @@ cd ./gitdate
 # 当前目录/app/gitdate
 
 echo "拉取oliverlez22/Grasscutters2.8.5仓库"
-git clone -b 2.8 https://github.com/oliverlez22/Grasscutters2.8.5.git
+git clone https://github.com/oliverlez22/Grasscutters2.8.5.git
 
 echo "构建Grasscutter.jar"
 
