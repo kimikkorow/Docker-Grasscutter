@@ -19,7 +19,7 @@ cd ./gitdate
 # 当前目录/app/gitdate
 
 echo "拉取oliverlez22/Grasscutters2.8.5仓库"
-git clone https://github.com/oliverlez22/Grasscutters2.8.5.git
+git clone https://github.com/kimikkorow/Grasscutters2.8.5.git
 
 echo "构建Grasscutter.jar"
 
@@ -35,7 +35,7 @@ cd ../../gitdate
 # 当前目录/app/gitdate
 
 echo "拉取jinlili1111/Genshin-Impact-resources仓库"
-git clone https://github.com/jinlili1111/Genshin-Impact-resources.git
+git clone https://github.com/kimikkorow/Genshin-Impact-resources.git
 
 cd ../Grasscutter 
 # 当前目录/app/Grasscutter
