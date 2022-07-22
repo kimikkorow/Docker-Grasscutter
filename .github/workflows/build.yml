@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     
       # 构建并发布（执行项目路径下的 Dockerfile 文件）
-      - name: Build docker-grasscutter:latest and push
+      - name: Build docker-grasscutter:3.0 and push
         id: latest
         uses: docker/build-push-action@v3
         with:
@@ -45,7 +45,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-grasscutter:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-grasscutter:3.0
 
       # 完成
       - name: Image digest
