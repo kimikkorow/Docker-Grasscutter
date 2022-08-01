@@ -6,7 +6,7 @@ ENV TZ=Asia/Shanghai \
     accessAddress=127.0.0.1 \
     GrasscuttersWebDashboard=6.1.0 \
     opencommand=1.2.4 \
-    github_proxy=https://ghproxy.com/
+    github_proxy=https://github.yuilier.eu.org/
 
 ADD . /app
 
