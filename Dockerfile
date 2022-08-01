@@ -4,7 +4,7 @@ ENV TZ=Asia/Shanghai \
     mongodb=localhost:27017 \
     bindPort=443 \
     accessAddress=127.0.0.1 \
-    GrasscuttersWebDashboard=6.0.0 \
+    GrasscuttersWebDashboard=6.1.0 \
     opencommand=1.2.4 \
     github_proxy=https://ghproxy.com/
 
