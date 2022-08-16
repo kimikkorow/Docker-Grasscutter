@@ -1,10 +1,12 @@
-创建docker-compose.yml文件
-```
+# 使用 docker-compose.yml 文件运行
+
+```bash
 nano ./docker-compose.yml
 ```
 
 修改并写入以下内容到docker-compose.yml
-```
+
+```bash
 version: '3.3'
 services:
   grasscutter:
@@ -39,6 +41,7 @@ services:
 ```
 
 运行容器：
-```
+
+```bash
 docker-compose up -d
 ```
