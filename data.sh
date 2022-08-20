@@ -9,7 +9,8 @@ echo Asia/Shanghai >/etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
 echo "安装依赖"
-apt-get install sudo nano git wget curl openjdk-17-jdk openjdk-17-jre -y
+apt install sudo -y
+sudo apt install nano git wget curl openjdk-17-jdk openjdk-17-jre -y
 
 # 当前目录 /app
 mkdir Grasscutter
